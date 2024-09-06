@@ -1,0 +1,94 @@
+/*
+ * STM32F0R0Rxx.h
+ *
+ *  Created on: Aug 12, 2024
+ *      Author: jayansola
+ */
+
+#ifndef STM32F030R8_H_
+#define STM32F030R8_H_
+
+
+#define FLASH_BASEADDR			   		0x00000000UL					/*Main Flash Memory,SRAM Base Address*/
+#define RESERVE1_BASEADDR				0x00008000UL					/*Reserved Base Address*/
+#define MAIN_FLASH_BASEADDR				0x08000000UL					/*Main Flash Memory Base Address*/
+#define RESERVE2_BASEADDR				0x08008000UL					/*Reserved Base Address*/
+#define SYSTEM_MEMORY_BASEADDR  		0x1FFFEC00UL 					/*System Memory Base Address*/
+#define OPTION_BYTES_BASEADDR   		0x1FFFF800UL					/*Option Byte Base Address*/
+#define RESERVE3_BASEADDR				0x1FFFFC00UL					/*Reserved Base Address*/
+#define SRAM_BASEADDR           		0x20000000UL         			/*SRAM Base Address*/
+#define RESERVE4_BASEADDR				0x20001000UL					/*Reserved Base Address*/
+
+
+//BUS MACROS
+#define APB_BASEADDR					0x40000000UL
+#define AHB1_BASEADDR					0x40020000UL
+#define AHB2_BASEADDR					0x48000000UL
+
+//APB PERIPHERAL MACROS DEFINITION
+#define APB_RESERVE_BASEADDR  		   (APB_BASEADDR + 0x0000UL)
+#define TIM3_BASEADDRR                 (APB_BASEADDR + 0x0400UL)
+#define APB_RESERVE2_BASEADDR  		   (APB_BASEADDR + 0x0800UL)
+#define TIM6_BASEADDRR                 (APB_BASEADDR + 0x1000UL)
+#define TIM7_BASEADDRR                 (APB_BASEADDR + 0x1400UL)
+#define APB_RESERVE3_BASEADDR  		   (APB_BASEADDR + 0x1800UL)
+#define TIM14_BASEADDRR                (APB_BASEADDR + 0x2000UL)
+#define APB_RESERVE4_BASEADDR  		   (APB_BASEADDR + 0x2400UL)
+#define RTC_BASEADDRR                  (APB_BASEADDR + 0x2800UL)
+#define WWDG_BASEADDRR                 (APB_BASEADDR + 0x2C00UL)
+#define IWDG_BASEADDRR                 (APB_BASEADDR + 0x3000UL)
+#define APB_RESERVE5_BASEADDR  		   (APB_BASEADDR + 0x3400UL)
+#define SPI2_BASEADDRR                 (APB_BASEADDR + 0x3800UL)
+#define APB_RESERVE6_BASEADDR  		   (APB_BASEADDR + 0x3C00UL)
+#define USART2_BASEADDRR               (APB_BASEADDR + 0x4400UL)
+#define USART3_BASEADDRR               (APB_BASEADDR + 0x4800UL)
+#define USART4_BASEADDRR               (APB_BASEADDR + 0x4C00UL)
+#define USART5_BASEADDRR               (APB_BASEADDR + 0x5000UL)
+#define I2C1_BASEADDRR                 (APB_BASEADDR + 0x5400UL)
+#define I2C2_BASEADDRR                 (APB_BASEADDR + 0x5800UL)
+#define USB_BASEADDRR                  (APB_BASEADDR + 0x5C00UL)
+#define USB_SRAM_BASEADDRR             (APB_BASEADDR + 0x6000UL)
+#define APB_RESERVE7_BASEADDR  		   (APB_BASEADDR + 0x63FFUL)
+#define PWR_BASEADDR  		           (APB_BASEADDR + 0x7000UL)
+#define APB_RESERVE8_BASEADDR  		   (APB_BASEADDR + 0x7400UL)
+#define APB_RESERVE9_BASEADDR  		   (APB_BASEADDR + 0x8000UL)
+
+//AHB1 PERIPHERAL MACROS DEFINITION
+#define DMA_BASEADDR                   (AHB1_BASEADDR + 0x0000UL)
+#define AHB1_RESERVE_BASEADDR  		   (AHB1_BASEADDR + 0x0400UL)
+#define RCC_BASEADDR                   (AHB1_BASEADDR + 0x1000UL)
+#define AHB1_RESERVE1_BASEADDR  	   (AHB1_BASEADDR + 0x1400UL)
+#define FLASH_INTERFACE_BASADDR        (AHB1_BASEADDR + 0x2000UL)
+#define AHB1_RESERVE2_BASEADDR  	   (AHB1_BASEADDR + 0x2400UL)
+#define CRC_BASEADDR  	               (AHB1_BASEADDR + 0x3000UL)
+#define AHB1_RESERVE3_BASEADDR  	   (AHB1_BASEADDR + 0x3400UL)
+#define AHB1_RESERVE4_BASEADDR  	   (AHB1_BASEADDR + 0x4400UL)
+
+//AHB2 PERIPHERAL MACROS DEFINITION
+#define GPIOA_BASEADDR  			   (AHB2_BASEADDR + 0x0000UL)
+#define GPIOB_BASEADDR  			   (AHB2_BASEADDR + 0x0400UL)
+#define GPIOC_BASEADDR  			   (AHB2_BASEADDR + 0x0800UL)
+#define GPIOD_BASEADDR  			   (AHB2_BASEADDR + 0x0C00UL)
+#define AHB2_RESERVE_BASEADDR  		   (AHB2_BASEADDR + 0x1000UL)
+#define GPIOF_BASEADDR  		       (AHB2_BASEADDR + 0x1400UL)
+#define AHB2_RESERVE1_BASEADDR  	   (AHB2_BASEADDR + 0x1800UL)
+
+
+
+
+//GPIOx TYPEDEF
+/*
+typedef struct{
+	uint32_t  MODER;
+	uint8_t   OTYPER;
+	uint32_t  OSPEEDER;
+	unit32_t  PUPDR;
+	uint8_t   IDR;
+	uint8_t   ODR;
+	uint32_t  BSRR;
+	uint8_t   LCKR;
+	uint8_t   AFR[2];
+	uint8_t   BRR;
+}GPIO_Reg_t;
+*/
+#endif /* STM32F030R8_H_ */
